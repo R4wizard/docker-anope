@@ -1,0 +1,32 @@
+{
+	"network": "DemoNetwork",
+	"hostname": "192.168.99.100",
+	"uplink": {
+		"host": "192.168.99.100",
+		"port": 6665,
+		"password": "services-password"
+	},
+	"seed": 1234567,
+	"ulineservers": ["192.168.99.100"],
+	"opers": [
+		{"name": "R4wizard", "type": "Services Root"},
+		{"name": "Jinux", "type": "Services Administrator"}
+	],
+	"mysql": {
+		"host": "192.168.99.100",
+		"database": "anope",
+		"username": "anope",
+		"password": "anope",
+		"port": 3306
+	},
+	"names": {
+		"BotServ": "BotServ",
+		"ChanServ": "Guardian",
+		"Global": "Global",
+		"HostServ": "HostServ",
+		"StatServ": "StatServ",
+		"MemoServ": "MemoServ",
+		"NickServ": "NickServ",
+		"OperServ": "OperServ"
+	}
+}

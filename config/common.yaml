@@ -1,0 +1,59 @@
+exec: [ "/anope/bin/start.sh" ]
+data_sources: [ defaults, file, environment, environment_json ]
+template_sources: [ file ]
+default_environment: production
+
+environments:
+  production:
+
+defaults:
+  global:
+    network: Unknown
+    hostname: services.irc.example.org
+    uplink:
+      host: 127.0.0.1
+      port: 6666,
+      password: inspircd-services1234
+    seed: 1234567,
+    ulineservers: ['localhost']
+    opers: []
+    mysql:
+      host: localhost
+      database: anope
+      username: anope
+      password: anope
+      port: 3306
+    names:
+      BotServ: BotServ
+      ChanServ: ChanServ
+      Global: Global
+      HostServ: HostServ
+      StatServ: StatServ
+      MemoServ: MemoServ
+      NickServ: NickServ
+      OperServ: OperServ
+  start.sh.erb:
+    target: /anope/bin/start.sh
+    perms: 0744
+  botserv.conf.erb:
+    target: /anope/conf/botserv.conf
+  chanserv.conf.erb:
+    target: /anope/conf/chanserv.conf
+  chanstats.conf.erb:
+    target: /anope/conf/chanstats.conf
+  global.conf.erb:
+    target: /anope/conf/global.conf
+  hostserv.conf.erb:
+    target: /anope/conf/hostserv.conf
+  irc2sql.conf.erb:
+    target: /anope/conf/irc2sql.conf
+  memoserv.conf.erb:
+    target: /anope/conf/memoserv.conf
+  nickserv.conf.erb:
+    target: /anope/conf/nickserv.conf
+  operserv.conf.erb:
+    target: /anope/conf/operserv.conf
+  services.conf.erb:
+    target: /anope/conf/services.conf
+  modules.conf.erb:
+    target: /anope/conf/modules.conf

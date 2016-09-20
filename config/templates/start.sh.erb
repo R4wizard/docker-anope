@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "generating self signed certificates for ssl..."
+mkdir -p /anope/conf/certs
+openssl req -x509 -nodes -newkey rsa:2048 -keyout /anope/conf/certs/key.pem -out /anope/conf/certs/cert.pem \
+	 -subj "/C=GB/ST=Unspecified/L=Unspecified/O=<%= network %>/OU=<%= network %> IRC Network/CN=<%= hostname %>"
+openssl dhparam -out /anope/conf/dhparams.pem 2048 -dsaparam
+echo starting anope...
+cd /anope
+chown -R anope:anope /anope
+sudo -u anope /anope/bin/services --nofork

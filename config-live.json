@@ -1,0 +1,32 @@
+{
+	"network": "ShadowAcre",
+	"hostname": "services.irc.shadowacre.ltd",
+	"uplink": {
+		"host": "irc.shadowacre.ltd",
+		"port": 6665,
+		"password": "inspircd-services1234"
+	},
+	"seed": 7777777,
+	"ulineservers": ["irc.shadowacre.ltd"],
+	"opers": [
+		{"name": "R4wizard", "type": "Services Root"},
+		{"name": "Jinux", "type": "Services Administrator"}
+	],
+	"mysql": {
+		"host": "mysql.irc.shadowacre.ltd",
+		"database": "anope",
+		"username": "anope",
+		"password": "anope",
+		"port": 3306
+	},
+	"names": {
+		"BotServ": "BotServ",
+		"ChanServ": "Guardian",
+		"Global": "Global",
+		"HostServ": "HostServ",
+		"StatServ": "StatServ",
+		"MemoServ": "MemoServ",
+		"NickServ": "NickServ",
+		"OperServ": "OperServ"
+	}
+}
